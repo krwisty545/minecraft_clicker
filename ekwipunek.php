@@ -1,0 +1,82 @@
+<?php
+session_start();
+require_once 'Php/eq.php';
+?>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Autorzy</title>
+	<meta charset="UTF-8" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Muli|Raleway|Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+	<script type="text/javascript" src="Js/eq.js"></script>
+	<div id="header" ><br/><br/>
+		<font size="7"><center>Minecraft Clicker&nbsp;</center></font>
+		<div id="loginmenuindex">
+<br/>
+		<span style="cursor:pointer;" onclick="window.open('/nowosci.php')">| Nowosci</span>
+<br/>		
+		<span><?php echo "| Witaj: ".$_SESSION['user']?>/<a href="/Php/logout.php">Wyloguj</a></span>
+		
+		</div>
+		
+	</div>
+	<div id="header2" ></div>
+	
+	
+	<div id="container">
+
+	<div id="lcont">
+			<h3>Menu:</h3>
+			<br/> <!-- 3x<br/> co oddzielną podstrone -->
+				
+				<a href="index.php" alt="Strona główna" class="nawigacja" id="wyborglowna" onclick="save()">Strona Główna</a>
+			<br/><br/><br/>		
+				<a href="sklep.php" alt="sklep" class="nawigacja" id="sklep" onclick="save()">Sklep</a>
+			<br/><br/><br/>		
+				<a href="ekwipunek.php" alt="ekwipunek" class="nawigacja" id="ekwipunek" onclick="save()">Ekwipunek</a>
+			<br/><br/><br/>
+				<a href="pomoc.php" alt="Pomoc" class="nawigacja" id="pomoc" onclick="save()">Pomoc</a>
+			<br/><br/><br/>
+				<a href="zglosblad.php" alt="Znalazles blad" class="nawigacja" id="blad" onclick="save()">Znalazłes błąd?</a>
+			<br/><br/><br/>
+				<a href="wesprzyj.php" alt="Wesprzyj nas" class="nawigacja" id="wesprzyj" onclick="save()">Wesprzyj nas!</a>
+			<br/><br/><br/>
+				<a href="autorzy.php" alt="autorzy" class="nawigacja" id="autorzy" onclick="save()">Autorzy</a>
+			<br/><br/><br/>
+			
+		</div>
+
+	<div id="maincont"><!--Głowne gowno-->
+		<span id="materials_table"></span>
+		<img src="img/shop/arr_left.png" width="50px" height="50px" class="sklepstrzalki" id="lnavshop" onclick="select_page(-1)" style="visibility:hidden;"/>
+		<img src="img/shop/arr_right.png" width="50px" height="50px" class="sklepstrzalki" id="rnavshop" onclick="select_page(1)" style="visibility:hidden;"/>
+	</div>
+	
+	
+		<div id="rcont" >
+			<h3>Swiat:</h3>
+		<br/><br/>
+			<a href="index.php" class="nawigacja" id="wyborswiat1">Oak forest</a>
+		<br/><br/><br/>
+			<a href="world2.php" class="nawigacja" id="swiat2">Small Desert</a>
+		</div>
+		
+	</div>
+	
+	
+		<img src="img/bgfooter.png" id="bgfooter" />
+	<div id="footer">
+		<!--<a href="#" alt="Miejsce na twoja reklame, wiecej: kontakt." target="_blank"><img src="img/bgad.png" width="800px" height="100px" id="reklama"/></a>-->
+		<p id="copyright">	Wszelkie prawa zastrzeżone | 2019 &copy; </p>
+		 <!--<a href="index_light.html" id="tryb">Przelacz tryb</a>-->
+	</div>
+
+
+
+
+
+</body>
+</html>
